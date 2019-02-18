@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>App</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" integrity="sha384-WskhaSGFgHYWDcbwN70/dfYBj47jz9qbsMId/iRN3ewGhXQFZCSftd1LZCfmhktB" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js" integrity="sha384-smHYKdLADwkXOn1EmN1qk/HfnUcbVRZyYmZ4qpPea6sjB/pTJ0euyQp0Mk8ck+5T" crossorigin="anonymous"></script>
+  </head>
+  <style>
+    span{
+      width: 200px;
+    }
+    div.span-holder{
+      float: left;
+      width: 200px;
+    }
+    .main-div{
+      margin: 100px 10% 0 10%;
+    }
+    .left{
+        float: left;
+        width: 40%;
+      }
+    .right{
+        float: left;
+        width: 40%;
+        height: 300px;
+        margin-left: 5%;
+    }
+    .new{
+      display: none;
+    }
+  </style>
+  <body>
+
+    <div class="main-div">
+      <div class="left">
+        <div class="span-holder"><span>Pro</span></div> <input type="text" id="pro" value=""><br>
+        <div class="span-holder"><span>Brennwert in KJ:</span></div> <input type="text" id="kj" value=""><br>
+        <div class="span-holder"><span>Brennwert in Kcal:</span></div> <input type="text" id="kcal" value=""><br>
+        <div class="span-holder"><span>Fett</span></div> <input type="text" id="fett" value=""><br>
+        <div class="span-holder"><span>davon gesättigte Fettsäuren</span></div> <input type="text" id="fettsauren" value=""><br>
+        <div class="span-holder"><span>Kohlenhydrate</span></div> <input type="text" id="kh" value=""><br>
+        <div class="span-holder"><span>davon Zucker</span></div> <input type="text" id="zucker" value=""><br>
+        <div style="width: 100%">
+          <input type="text" id="ix" value="" style="width: 180px; margin-right: 20px;"><input type="text" id="vx" value="">
+        </div>
+        <div class="span-holder"><span>Eiweiß</span></div> <input type="text" id="eiweiss" value=""><br>
+        <div class="span-holder"><span>Salz</span></div> <input type="text" id="salz" value=""><br>
+        <div style="width: 100%" class="new">
+          <input type="text" id="i0" value="" style="width: 180px; margin-right: 20px;"><input type="text" id="v0" value="">
+        </div>
+        <div style="width: 100%" class="new">
+          <input type="text" id="i1" value="" style="width: 180px; margin-right: 20px;"><input type="text" id="v1" value="">
+        </div>
+        <div style="width: 100%" class="new">
+          <input type="text" id="i2" value="" style="width: 180px; margin-right: 20px;"><input type="text" id="v2" value="">
+        </div>
+        <div style="width: 100%" class="new">
+          <input type="text" id="i3" value="" style="width: 180px; margin-right: 20px;"><input type="text" id="v3" value="">
+        </div>
+        <div style="width: 100%" class="new">
+          <input type="text" id="i4" value="" style="width: 180px; margin-right: 20px;"><input type="text" id="v4" value="">
+        </div>
+        <div style="width: 100%" class="new">
+          <input type="text" id="i5" value="" style="width: 180px; margin-right: 20px;"><input type="text" id="v5" value="">
+        </div>
+        <div style="width: 100%" class="new">
+          <input type="text" id="i6" value="" style="width: 180px; margin-right: 20px;"><input type="text" id="v6" value="">
+        </div>
+        <div style="width: 100%" class="new">
+          <input type="text" id="i7" value="" style="width: 180px; margin-right: 20px;"><input type="text" id="v7" value="">
+        </div>
+        <div style="width: 100%" class="new">
+          <input type="text" id="i8" value="" style="width: 180px; margin-right: 20px;"><input type="text" id="v8" value="">
+        </div>
+        <div style="width: 100%" class="new">
+          <input type="text" id="i9" value="" style="width: 180px; margin-right: 20px;"><input type="text" id="v9" value="">
+        </div>
+        <button type="button" id="plus" name="plus" class="btn btn-warning" style="margin-top: 20px">Click for more blank fields</button>
+        <button type="button" id="delete" name="plus" class="btn btn-danger" style="margin-top: 20px">Reset fields</button>
+        <button type="button" id="button" name="button" class="btn btn-primary" style="margin-top: 20px; float:right">Create table</button>
+      </div>
+      <div class="right">
+        <div style="border: solid 1px black">
+          <table style="width: 94%; margin: 3% ; font-family: arial;" cellpadding="5">
+            <tr>
+              <th style="border-bottom: solid 5px black; font-size: 20px;text-align: center" colspan="2" id="td-name">Nährwertangaben </th>
+            </tr>
+            <tr>
+              <th style="border-bottom: solid 1px black"></th>
+              <th style="text-align: right; border-bottom: solid 1px black;">Pro 100g</th>
+            </tr>
+            <tr>
+              <td style="font-weight: 700; border-bottom: solid 1px black;">Brennwert</td>
+              <td style="text-align: right; border-bottom: solid 1px black;" id="brenn">0 kJ/0 kcal</td>
+            </tr>
+            <tr>
+              <td style="font-weight: 700">Fett</td>
+              <td style="text-align: right; border-bottom: solid 1px black;" id="td-fett">0 g</td>
+            </tr>
+            <tr>
+              <td style="border-bottom: solid 1px black;">davon gesättigte Fettsäuren</td>
+              <td style="text-align: right; border-bottom: solid 1px black;" id="td-fettsauren">0 g</td>
+            </tr>
+            <tr>
+              <td style="font-weight: 700">Kohlenhydrate</td>
+              <td style="text-align: right; border-bottom: solid 1px black;" id="td-kh">0 g</td>
+            </tr>
+            <tr>
+              <td style="border-bottom: solid 0px black;">davon Zucker</td>
+              <td style="text-align: right; border-bottom: solid 1px black;" id="td-zucker">0 g</td>
+            </tr>
+            <tr>
+            <tr id="hidden-tr" style="display: none">
+              <td style="border-bottom: solid 1px black;">asd</td>
+              <td style="text-align: right; border-bottom: solid 1px black;">0 g</td>
+            </tr>
+            <tr>
+              <td style="font-weight: 700; border-bottom: solid 1px black; border-top: solid 1px black;">Eiweiß</td>
+              <td style="text-align: right; border-bottom: solid 1px black; border-top: solid 1px black;" id="td-eiweiss">0 g</td>
+            </tr>
+            <tr>
+              <td style="font-weight: 700;">Salz</td>
+              <td style="text-align: right; +" id="td-salz">0 g</td>
+            </tr>
+          </table>
+        </div>
+
+        <textarea name="name" id="text" rows="8" cols="80" style="width: 100%; margin-top:10px; font-size:12px"></textarea>
+          <button type="button" id="copy" name="button" class="btn btn-primary" style="margin-top: 20px; float:right">Copy table</button>
+      </div>
+    </div>
+
+
+
+  </body>
+
+  <script>
+  var x = 0;
+    $('#button').click(function() {
+      $('tr.appended').remove();
+      var kj = Math.round($('#kj').val()/$('#pro').val()*100);
+      var kcal = Math.round($('#kcal').val()/$('#pro').val()*100);
+      var fett = (Math.round($('#fett').val()/$('#pro').val()*100*10)/10).toString().replace(".",",");
+      var fettsauren = (Math.round($('#fettsauren').val()/$('#pro').val()*100*10)/10).toString().replace(".",",");
+      var kh = (Math.round($('#kh').val()/$('#pro').val()*100*10)/10).toString().replace(".",",");
+      var zucker = (Math.round($('#zucker').val()/$('#pro').val()*100*10)/10).toString().replace(".",",");
+      var eiweiss = (Math.round($('#eiweiss').val()/$('#pro').val()*100*10)/10).toString().replace(".",",");
+      var salz = (Math.round($('#salz').val()/$('#pro').val()*100*10)/10).toString().replace(".",",");;
+
+      $('#brenn').html(kj + ' kJ/ ' + kcal + ' kcal');
+      $('#td-fett').html(fett + ' g');
+      $('#td-fettsauren').html(fettsauren + ' g');
+      $('#td-kh').html(kh + ' g');
+      $('#td-zucker').html(zucker + ' g');
+      $('#td-eiweiss').html(eiweiss + ' g');
+      $('#td-salz').html(salz + ' g');
+
+      var table = "<div style=\"border: solid 1px black; width: fit-content;\"><table style=\"margin: 5px; font-family: Arial; border-collapse: collapse;\" cellpadding=\"4\" >"
+      table += "\n\t<tr>\n\t\t<td style=\"border-bottom: solid 5px black; font-size: 20px; text-align: center; font-weight: 700\" colspan=\"2\">Nährwertangaben</td>\n\t</tr>";
+      table += "\n\t<tr>\n\t\t<td style=\"border-bottom: solid 1px black\"></td>\n\t\t<td style=\"text-align: right; font-weight:700; border-bottom: solid 1px black\">Pro 100g</td>\n\t</tr>";
+      table += "\n\t<tr>\n\t\t<td style=\"font-weight: 700; border-bottom: solid 1px black\">Brennwert</td>\n\t\t<td style=\"text-align: right; border-bottom: solid 1px black\">" + kj + ' kJ/ ' + kcal + ' kcal' + "</td>\n\t</tr>";
+      table += "\n\t<tr>\n\t\t<td style=\"font-weight: 700\">Fett</td>\n\t\t<td style=\"text-align: right; border-bottom: solid 1px black\">" + fett + " g</td>\n\t</tr>";
+      table += "\n\t<tr>\n\t\t<td style=\"border-bottom: solid 1px black\">davon gesättigte Fettsäuren</td>\n\t\t<td style=\"text-align: right; border-bottom: solid 1px black\">" + fettsauren + " g</td>\n\t</tr>";
+      table += "\n\t<tr>\n\t\t<td style=\"font-weight: 700\">Kohlenhydrate</td>\n\t\t<td style=\"text-align: right; border-bottom: solid 1px black\">" + kh + " g</td>\n\t</tr>";
+      table += "\n\t<tr>\n\t\t<td>davon Zucker</td>\n\t\t<td style=\"text-align: right; border-bottom: solid 1px black\">" + zucker + " g</td>\n\t</tr>";
+
+      if($('#ix').val() != "" && $('#vx').val() != ""){
+        var num = (Math.round($('#vx').val()/$('#pro').val()*100*10)/10).toString().replace(".",",");
+        table += "\n\t<tr>\n\t\t<td style=\"border-bottom: solid 1px black\">"+$('#ix').val()+"</td>\n\t\t<td style=\"text-align: right; border-bottom: solid 1px black\">" + num + " g</td>\n\t</tr>";
+        $("#hidden-tr").css({'display': 'table-row'});
+        $("#hidden-tr td:nth-child(1)").html($('#ix').val());
+        $("#hidden-tr td:nth-child(2)").html(num + ' g');
+      }
+      table += "\n\t<tr>\n\t\t<td style=\" border-bottom: solid 1px black\">Eiweiß</td>\n\t\t<td style=\"text-align: right; border-bottom: solid 1px black\">" + eiweiss + " g</td>\n\t</tr>";
+      table += "\n\t<tr>\n\t\t<td style=\"font-weight: 700\">Salz</td>\n\t\t<td style=\"text-align: right\">" + salz + " g</td>\n\t</tr>";
+
+      for(var i = 0; i < 10; i++){
+        if($('div.new:eq(' + i + ') input:nth-child(1)').val() != "" && $('div.new:eq(' + i + ') input:nth-child(2)').val() != ""){
+          var str = (Math.round($('div.new:eq(' + i + ') input:nth-child(2)').val()/$('#pro').val()*100*10)/10).toString().replace(".",",");
+          $('table').append( "<tr class=\"appended\"><td style=\"font-weight: 700; border-top: solid 1px black\">"+$('div.new:eq(' + i + ') input:nth-child(1)').val()+"</td><td style=\"text-align: right; border-top: solid 1px black\">"+str+" g</td></tr>" );
+          table += "\n\t<tr>\n\t\t<td style=\"font-weight: 700; border-top: solid 1px black\">"+$('div.new:eq(' + i + ') input:nth-child(1)').val()+"</td>\n\t\t<td style=\"text-align: right; border-top: solid 1px black\">" + str + " g</td>\n\t</tr>";
+        }
+      }
+
+      table += "\n</table></div>"
+      $("#text").val(table);
+    });
+    $('#plus').click(function() {
+      console.log(x);
+      $('div.new:eq(' + x + ')').css({'display': 'inline-block'});
+      x++;
+    });
+    $('#copy').click(function() {
+      var copyText = document.getElementById("text");
+      copyText.select();
+      document.execCommand("copy");
+    });
+    $('#delete').click(function() {
+      $('div.new').css({'display': 'none'});
+      $('tr.appended').remove();
+      $('#hidden-tr').css({'display': 'none'});
+      $('input').val("");
+      $('textarea').val("");
+      $("tr td:nth-child(2)").html('0 g');
+    });
+  </script>
+</html>
